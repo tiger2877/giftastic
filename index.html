@@ -39,7 +39,7 @@
 
   
     // Initial array of movies
-    var movies = ["The Matrix", "The Notebook", "Mr. Nobody", "The Lion King"];
+    var movies = ["Finding Nemo", "Frozen", "Lion King", "Cinderella"];
 
    // Function for displaying movie data
    function renderButtons() {
@@ -87,12 +87,12 @@
     function displayMovieInfo() {
       
         // In this case, the "this" keyword refers to the button that was clicked
-        var movies = $(this).attr("data-person");
+        var movies = $(this).attr("data-name");
 
-        // Constructing a URL to search Giphy for the name of the person who said the quote
+        // Constructing a URL to search Giphy for the movies array
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
             movies + "&api_key=dc6zaTOxFJmzC&limit=10";
-
+     
         // Performing our AJAX GET request
         $.ajax({
             url: queryURL,
@@ -100,6 +100,10 @@
         })
             // After the data comes back from the API
             .then(function(response) {
+
+                console.log(queryURL);
+                console.log(response);
+                
             // Storing an array of results in the results variable
             var results = response.data;
 
@@ -128,7 +132,7 @@
                         gifDiv.append(p);
                         gifDiv.append(personImage);
 
-                        // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
+                        // Prepending the gifDiv to the "#movies-view" div in the HTML
                         $("#movies-view").prepend(gifDiv);
                     }
                 }
