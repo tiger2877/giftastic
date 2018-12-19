@@ -13,7 +13,7 @@
 
 <body>
         <div class="container">
-            <h1>Movie Search</h1>
+            <h1>Popular Kids Movie</h1>
             <!-- First Row  -->
             <div class="row">
                 <div class="col-md-12">
@@ -55,7 +55,7 @@
 
   
     // Initial array of movies
-    var movies = ["Finding Nemo", "Frozen", "Lion King", "Cinderella","Pinocchio","Pocahontas"];
+    var moviesArr = ["Finding Nemo", "Frozen", "Lion King", "Cinderella","Pinocchio","Pocahontas"];
 
    // Function for displaying movie data
    function renderButtons() {
@@ -65,7 +65,7 @@
     $("#buttons-view").empty();
 
         // Looping through the array of movies
-        for (var i = 0; i < movies.length; i++) {
+        for (var i = 0; i < moviesArr.length; i++) {
 
         // Then dynamicaly generating buttons for each movie in the array
         // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
@@ -73,9 +73,9 @@
         // Adding a class of movie-btn to our button
         a.addClass("movie-btn");
         // Adding a data-attribute
-        a.attr("data-name", movies[i]);
+        a.attr("data-name", moviesArr[i]);
         // Providing the initial button text
-        a.text(movies[i]);
+        a.text(moviesArr[i]);
         // Adding the button to the buttons-view div
         $("#buttons-view").append(a);
         }
@@ -88,7 +88,7 @@
         var movie = $("#movie-input").val().trim();
 
         // Adding movie from the textbox to our array
-        movies.push(movie);
+        moviesArr.push(movie);
 
         // Calling renderButtons which handles the processing of our movie array
         renderButtons();
