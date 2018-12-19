@@ -50,6 +50,7 @@
   <!-- STEP 2: create function to perform AJAX get request              -->
   <!-- STEP 3: create clear function to clear out previous content      -->
   <!-- STEP 4: create funtion to pause GIF on click                     -->
+  <!-- STEP 5: List additional metadata (title, tags, etc) for each gif -->
   <!-- ================================================================ -->*/
 
   
@@ -139,21 +140,24 @@
                         // Creating a div for the gif
                         var gifDiv = $("<div>");
 
-                        // Storing the result item's rating
-                        var rating = results[i].rating;
+                        // Storing the result item's rating & title
+                        var title= results[i].title;
+                        var rating = results[i].rating;    
 
                         // Creating a paragraph tag with the result item's rating
-                        var p = $("<p>").text("Rating: " + rating);
+                        var pOne = $("<p>").text("Title: " + title);
+                        var pTwo = $("<p>").text("Rating: " + rating);
 
                         // Creating an image tag
                         var movieImage = $("<img>");
 
                         // Giving the image tag an src attribute of a proprty pulled off the
                         // result item
-                        movieImage.attr("src", results[i].images.fixed_height.url);
+                        movieImage.attr("src", results[i].images.fixed_height_small.url);
 
                         // Appending the paragraph and personImage we created to the "gifDiv" div we created
-                        gifDiv.append(p);
+                        gifDiv.append(pOne);
+                        gifDiv.append(pTwo);
                         gifDiv.append(movieImage);
 
                         // Prepending the gifDiv to the "#movies-view" div in the HTML
