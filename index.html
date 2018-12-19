@@ -48,7 +48,8 @@
   <!-- ================================================================ -->
   <!-- STEP 1: create function to add buttons to the DOM                -->
   <!-- STEP 2: create function to perform AJAX get request              -->
-  <!-- STEP 3: create funtion to pause GIF on click                     -->
+  <!-- STEP 3: create clear function to clear out previous content      -->
+  <!-- STEP 4: create funtion to pause GIF on click                     -->
   <!-- ================================================================ -->*/
 
   
@@ -98,8 +99,17 @@
       // Calling the renderButtons function to display the intial buttons
       renderButtons();
 
+
+      // Function to empty out the articles
+    function clear() {
+    $("#movies-view").empty();
+    }
+
     function displayMovieInfo() {
       
+        // Empty the region associated with the articles
+        clear();
+
         // In this case, the "this" keyword refers to the button that was clicked
         var movies = $(this).attr("data-name");
 
