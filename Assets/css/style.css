@@ -12,34 +12,12 @@ body {
   box-sizing: border-box;
 }
 
+label { color: #B4886B; font-weight: bold; display: block; width: 150px; float: left; } 
 
-.jumbotron {
-	background-color: #428bca
-}
-
-.jumbotron h1 {
-	color:white;
-}
 
 p, h1, h4 {
 	font-family: 'Roboto Slab', serif;
 }
-
-#funText {
-	color: black;
-	font-size: 24px;
-	font-family: 'Roboto Slab', serif;
-}
-
-#box {
-	height: 100px;
-	width: 100px;
-	margin:auto;
-}
-
-
-
-/* general */
 
 .container {
   width: 100%;
@@ -150,5 +128,3 @@ h3, h2 {
 img:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
-
-

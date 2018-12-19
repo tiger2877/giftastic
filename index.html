@@ -143,11 +143,11 @@
                         // Storing the result item's rating & title
                         var title= results[i].title;
                         var rating = results[i].rating;    
-
+                        var source = results[i].source;       
                         // Creating a paragraph tag with the result item's rating
                         var pOne = $("<p>").text("Title: " + title);
                         var pTwo = $("<p>").text("Rating: " + rating);
-
+                        var pThree = $("<p>").text("Source: " + source);    
                         // Creating an image tag
                         var movieImage = $("<img>");
 
@@ -158,6 +158,7 @@
                         // Appending the paragraph and personImage we created to the "gifDiv" div we created
                         gifDiv.append(pOne);
                         gifDiv.append(pTwo);
+                        gifDiv.append(pThree);
                         gifDiv.append(movieImage);
 
                         // Prepending the gifDiv to the "#movies-view" div in the HTML
