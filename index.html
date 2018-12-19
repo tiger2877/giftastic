@@ -126,8 +126,8 @@
             // After the data comes back from the API
             .then(function(response) {
 
-                console.log(queryURL);
-                console.log(response);
+                // console.log(queryURL);
+                // console.log(response);
 
             // Storing an array of results in the results variable
             var results = response.data;
@@ -145,7 +145,7 @@
                         var rating = results[i].rating;    
                         var source = results[i].source;       
                         // Creating a paragraph tag with the result item's rating
-                        var pOne = $("<p>").text("Title: " + title);
+                        var pOne = $("<p>").html("<h3> Title: " + title + "</h3>");
                         var pTwo = $("<p>").text("Rating: " + rating);
                         var pThree = $("<p>").text("Source: " + source);    
                         // Creating an image tag
