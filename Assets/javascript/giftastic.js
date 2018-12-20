@@ -1,4 +1,4 @@
-  /*-- GIFTASTIC -->
+    /*-- GIFTASTIC -->
   <!-- ================================================================ -->
   <!-- STEP 1: create function to add buttons to the DOM                -->
   <!-- STEP 2: create function to perform AJAX get request              -->
