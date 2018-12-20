@@ -1,4 +1,4 @@
-    /*-- GIFTASTIC -->
+  /*-- GIFTASTIC -->
   <!-- ================================================================ -->
   <!-- STEP 1: create function to add buttons to the DOM                -->
   <!-- STEP 2: create function to perform AJAX get request              -->
@@ -47,19 +47,14 @@
 
         // Calling renderButtons which handles the processing of our movie array
         renderButtons();
-
-        // Save the todos into localstorage.
-        // We need to use JSON.stringify to turn the list from an array into a string
-        localStorage.setItem("kidsmovie", JSON.stringify(moviesArr));
       
       });
 
       // Adding a click event listener to all elements with a class of "movie-btn"
       $(document).on("click", ".btn-sm", displayMovieInfo);
-      var moviesArr= JSON.parse(localStorage.getItem("kidsmovie"));
-      
+           
       // Calling the renderButtons function to display the intial buttons
-      renderButtons(moviesArr);
+      renderButtons();
      
 
       // Function to empty out the articles
