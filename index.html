@@ -141,10 +141,12 @@
                         // Creating a div for the gif
                         var gifDiv = $("<div>");
 
-                        // Storing the result item's rating & title
+                        // Storing the result item's title, rating, source, and type
                         var title= results[i].title;
                         var rating = results[i].rating;    
                         var source = results[i].source;       
+                        var type = results[i].type;
+                        var stillImage = results[i].images.fixed_height_still.url;
 
                         // Creating a paragraph tag with the result item's rating
                         var pOne = $("<p>").html("<h3> Title: " + title + "</h3>");
@@ -154,9 +156,10 @@
                         // Creating an image tag
                         var movieImage = $("<img>");
 
-                        // Adding a gif class
-                        movieImage.attr("class", "gif"); 
-
+                        // Adding class and data-state attribute to the movieImage
+                        movieImage.attr("class", type); 
+                        movieImage.attr("data-state", "still"); 
+                        movieImage.attr("data-still", stillImage);     
                         // Giving the image tag an src attribute of a proprty pulled off the
                         // result item
                         movieImage.attr("src", results[i].images.fixed_height_small.url);
