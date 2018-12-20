@@ -30,12 +30,13 @@
         a.attr("data-name", moviesArr[i]);
         // Providing the initial button text
         a.text(moviesArr[i]);
+        
         // Adding the button to the buttons-view div
         $("#buttons-view").append(a);
         }
     }
-
-  // This function handles events where a movie button is clicked
+  
+  // This function handles events where a new movie is added
   $("#add-movie").on("click", function(event) {
         event.preventDefault();
         // This line grabs the input from the textbox
@@ -46,14 +47,20 @@
 
         // Calling renderButtons which handles the processing of our movie array
         renderButtons();
+
+        // Save the todos into localstorage.
+        // We need to use JSON.stringify to turn the list from an array into a string
+        localStorage.setItem("kidsmovie", JSON.stringify(moviesArr));
+      
       });
 
       // Adding a click event listener to all elements with a class of "movie-btn"
       $(document).on("click", ".btn-sm", displayMovieInfo);
-
+      var moviesArr= JSON.parse(localStorage.getItem("kidsmovie"));
+      
       // Calling the renderButtons function to display the intial buttons
-      renderButtons();
-
+      renderButtons(moviesArr);
+     
 
       // Function to empty out the articles
     function clear() {
