@@ -25,7 +25,7 @@
         // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
         var a = $("<button>");
         // Adding a class of movie-btn to our button
-        a.addClass("btn btn-primary btn-lg");
+        a.addClass("btn btn-primary btn-sm");
         // Adding a data-attribute
         a.attr("data-name", moviesArr[i]);
         // Providing the initial button text
@@ -49,7 +49,7 @@
       });
 
       // Adding a click event listener to all elements with a class of "movie-btn"
-      $(document).on("click", ".btn-lg", displayMovieInfo);
+      $(document).on("click", ".btn-sm", displayMovieInfo);
 
       // Calling the renderButtons function to display the intial buttons
       renderButtons();
