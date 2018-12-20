@@ -1,4 +1,4 @@
-  /*-- GIFTASTIC -->
+    /*-- GIFTASTIC -->
   <!-- ================================================================ -->
   <!-- STEP 1: create function to add buttons to the DOM                -->
   <!-- STEP 2: create function to perform AJAX get request              -->
@@ -82,8 +82,8 @@
             // After the data comes back from the API
             .then(function(response) {
 
-                console.log(queryURL);
-                console.log(response);
+                //console.log(queryURL);
+                //console.log(response);
 
             // Storing an array of results in the results variable
             var results = response.data;
