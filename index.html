@@ -126,8 +126,8 @@
             // After the data comes back from the API
             .then(function(response) {
 
-                // console.log(queryURL);
-                // console.log(response);
+                console.log(queryURL);
+                console.log(response);
 
             // Storing an array of results in the results variable
             var results = response.data;
@@ -137,6 +137,7 @@
 
                     // Only taking action if the photo has an appropriate rating
                     if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
+
                         // Creating a div for the gif
                         var gifDiv = $("<div>");
 
@@ -144,12 +145,17 @@
                         var title= results[i].title;
                         var rating = results[i].rating;    
                         var source = results[i].source;       
+
                         // Creating a paragraph tag with the result item's rating
                         var pOne = $("<p>").html("<h3> Title: " + title + "</h3>");
                         var pTwo = $("<p>").text("Rating: " + rating);
-                        var pThree = $("<p>").text("Source: " + source);    
+                        var pThree = $("<p>").text("Source: " + source);  
+
                         // Creating an image tag
                         var movieImage = $("<img>");
+
+                        // Adding a gif class
+                        movieImage.attr("class", "gif"); 
 
                         // Giving the image tag an src attribute of a proprty pulled off the
                         // result item
