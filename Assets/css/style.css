@@ -53,6 +53,7 @@ h1 {
   font-size: 30px;
   line-height: 49px;
   border-bottom: 3px solid #dddddd;
+  color: aqua;
 }
 
 h2,
@@ -127,4 +128,88 @@ h3, h2 {
 
 img:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+@media only screen and (max-width:980px) {
+  nav {
+    margin-right: 5px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .main-section,
+  .sidebar {
+    max-width: 100%;
+  }
+
+  main {
+    overflow: auto;
+  }
+
+  .work {
+    /* Box-model */
+    width: 47%;
+
+    /* Positioning */
+    margin-bottom: 10px;
+  }
+
+  .work:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .work:nth-child(odd) {
+    float: right;
+  }
+
+  .auth-image {
+    width: 50%;
+  }
+
+  .sidebar {
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 640px){
+  #masthead {
+    /* Positioning */
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  header .container {
+    padding: 0;
+  }
+
+  main.container {
+    padding-top: 0;
+  }
+
+  #logo,
+  .work,
+  .auth-image {
+    width: 100%;
+  }
+
+  nav {
+    /* Box-model */
+    width: 100%;
+
+    /* Positioning */
+    margin: 15px 0;
+
+    /* Typography */
+    text-align: center;
+  }
+
+  nav a {
+    /* Box-model */
+    width: 30%;
+    padding-left: 0;
+
+    /* Positioning */
+    margin-left: 0;
+  }
 }
