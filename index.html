@@ -2,13 +2,20 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Popular Kids Movies</title>
+
   	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Linking CSS -->
     <link rel="stylesheet" type="text/css" href="Assets/css/reset.css">
-      <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+    <!-- Linking Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -16,13 +23,17 @@
 
 <body>
         <div class="container">
-            <h1>Popular Kids Movie</h1>
+            <div class = "jumbotron">
+            <h1 style="font-family: 'Amatic SC', cursive;">Popular Kids Movies</h1>
+            </div>  
             <!-- First Row  -->
             <div class="row">
-                <div class="col-md-12">
-                    <!-- Rendered Buttons will get Dumped Here  -->
-                    <div id="buttons-view"></div>
-                </div>        
+                    <div class="col-md-12">
+                        <div class="container">
+                            <!-- Rendered Buttons will get Dumped Here  -->
+                            <div id="buttons-view"></div>
+                        </div>
+                    </div>  
             </div>
             <!-- Second Row  -->
             <div class="row">
@@ -33,12 +44,12 @@
    
                 <div class="col-md-4">
                     <form id="movie-form">
-                    <label for="movie-input">Add a Movie, Yo!</label>
+                    <label for="movie-input">Add your movie</label>
                     <input type="text" id="movie-input">
                     <br>
                 
                     <!-- Button triggers new movie to be added -->
-                    <input id="add-movie" type="submit" value="Add a Movie, Yo!">
+                    <input id="add-movie" type="submit" value="Submit">
                     </form>
                 </div>
             </div>             

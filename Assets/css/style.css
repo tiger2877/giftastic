@@ -12,8 +12,14 @@ body {
   box-sizing: border-box;
 }
 
-label { color: #B4886B; font-weight: bold; display: block; width: 150px; float: left; } 
+label { color:orange; font-weight: bold; display: block; width: 150px; float: left; } 
 
+.jumbotron {
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
 
 p, h1, h4 {
 	font-family: 'Roboto Slab', serif;
@@ -50,9 +56,9 @@ h3 {
 
 h1 {
   padding-bottom: 20px;
-  font-size: 30px;
+  font-size: 50px;
   line-height: 49px;
-  border-bottom: 3px solid #dddddd;
+  border-bottom: 3px solid gold;
   color: aqua;
 }
 
@@ -98,23 +104,6 @@ h3, h2 {
   margin-bottom: 15px;
   line-height: 22px;
   border-bottom: 2px solid #eeeeee;
-}
-
-/* main */
-
-#main-container {
-  padding-top: 50px;
-  min-height: calc(100vh - 70px);
-}
-
-.main-section {
-  float: left;
-  width: 100%;
-  max-width: 960px;
-  padding: 30px;
-  margin: 0 0 40px;
-  background: black;
-  border: 1px solid #dddddd;
 }
 
 .image {

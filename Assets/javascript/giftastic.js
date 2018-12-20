@@ -9,7 +9,7 @@
 
   
     // Initial array of movies
-    var moviesArr = ["Finding Nemo", "Frozen", "Lion King", "Cinderella","Pinocchio","Pocahontas"];
+    var moviesArr = ["Finding Nemo", "Frozen", "Lion King", "Cinderella","Moana","Pinocchio","Pocahontas"];
 
    // Function for displaying movie data
    function renderButtons() {
@@ -25,7 +25,7 @@
         // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
         var a = $("<button>");
         // Adding a class of movie-btn to our button
-        a.addClass("movie-btn");
+        a.addClass("btn btn-primary btn-lg");
         // Adding a data-attribute
         a.attr("data-name", moviesArr[i]);
         // Providing the initial button text
@@ -49,7 +49,7 @@
       });
 
       // Adding a click event listener to all elements with a class of "movie-btn"
-      $(document).on("click", ".movie-btn", displayMovieInfo);
+      $(document).on("click", ".btn-lg", displayMovieInfo);
 
       // Calling the renderButtons function to display the intial buttons
       renderButtons();
@@ -114,7 +114,7 @@
                         movieImage.attr("class", type); 
                         movieImage.attr("data-state", "still"); 
                         movieImage.attr("data-still", stillImage);
-                        movieImage.attr('data-animate',animateImage);     
+                        movieImage.attr('data-animate', animateImage);     
                         // Giving the image tag an src attribute of a proprty pulled off the
                         // result item
                         movieImage.attr("src", results[i].images.fixed_height_small.url);
