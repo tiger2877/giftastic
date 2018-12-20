@@ -49,7 +49,7 @@
   <!-- STEP 1: create function to add buttons to the DOM                -->
   <!-- STEP 2: create function to perform AJAX get request              -->
   <!-- STEP 3: create clear function to clear out previous content      -->
-  <!-- STEP 4: create funtion to pause GIF on click                     -->
+  <!-- STEP 4: create function to pause GIF on click                     -->
   <!-- STEP 5: List additional metadata (title, tags, etc) for each gif -->
   <!-- ================================================================ -->*/
 
@@ -146,8 +146,8 @@
                         var rating = results[i].rating;    
                         var source = results[i].source;       
                         var type = results[i].type;
-                        var stillImage = results[i].images.fixed_height_still.url;
-
+                        var stillImage = results[i].images.fixed_height_small_still.url;
+                        var animateImage = results[i].images.fixed_height_small.url;    
                         // Creating a paragraph tag with the result item's rating
                         var pOne = $("<p>").html("<h3> Title: " + title + "</h3>");
                         var pTwo = $("<p>").text("Rating: " + rating);
@@ -159,7 +159,8 @@
                         // Adding class and data-state attribute to the movieImage
                         movieImage.attr("class", type); 
                         movieImage.attr("data-state", "still"); 
-                        movieImage.attr("data-still", stillImage);     
+                        movieImage.attr("data-still", stillImage);
+                        movieImage.attr('data-animate',animateImage);     
                         // Giving the image tag an src attribute of a proprty pulled off the
                         // result item
                         movieImage.attr("src", results[i].images.fixed_height_small.url);
@@ -172,6 +173,24 @@
 
                         // Prepending the gifDiv to the "#movies-view" div in the HTML
                         $("#movies-view").prepend(gifDiv);
+
+                        $(".gif").on("click", function() {
+                        // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+                        var state = $(this).attr("data-state");
+                        // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+                        // Then, set the image's data-state to animate
+                        // Else set src to the data-still value
+                            if (state === "still") {
+                                $(this).attr("src", $(this).attr("data-animate"));
+                                $(this).attr("data-state", "animate");
+                            } else {
+                                $(this).attr("src", $(this).attr("data-still"));
+                                $(this).attr("data-state", "still");
+                            }
+                        });
+
+
+                        
                     }
                 }
             });
