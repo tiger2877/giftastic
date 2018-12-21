@@ -122,6 +122,7 @@
   // Function to empty out the articles
     function clear() {
     $("#movies-view").empty();
+    $("#gif-view").empty();
     }
   
     function displayGifs() {
@@ -190,7 +191,7 @@
                         gifDiv.append(movieImage);
 
                         // Prepending the gifDiv to the "#movies-view" div in the HTML
-                        $("#movies-view").prepend(gifDiv);
+                        $("#gif-view").prepend(gifDiv);
 
                         $(".gif").on("click", function() {
                         // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
