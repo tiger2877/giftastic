@@ -3,13 +3,73 @@
   <!-- STEP 1: create function to add buttons to the DOM                -->
   <!-- STEP 2: create function to perform AJAX get request              -->
   <!-- STEP 3: create clear function to clear out previous content      -->
-  <!-- STEP 4: create function to pause GIF on click                     -->
+  <!-- STEP 4: create function to pause GIF on click                    -->
   <!-- STEP 5: List additional metadata (title, tags, etc) for each gif -->
   <!-- ================================================================ -->*/
 
   
     // Initial array of movies
-    var moviesArr = ["Disney Bolt", "Finding Nemo", "Frozen", "Lion King","Moana", "Pinocchio", "Ratatouille", "Toy Story"];
+    var moviesArr = ["Finding Nemo", "Frozen", "Lion King","Moana", "Pocahontas", "Ratatouille", "Toy Story"];
+
+ // displayMovieInfo function re-renders the HTML to display the appropriate content
+ function displayMovieInfo() {
+
+    var movie = $(this).attr("data-name");
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+
+    // Creating an AJAX call for the specific movie button being clicked
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+
+        console.log(queryURL);
+        console.log(response);
+
+      // Creating a div to hold the movie
+      var movieDiv = $("<div class='movie'>");
+
+      // Storing the rating data
+      var rating = response.Rated;
+
+      // Creating an element to have the rating displayed
+      var pOne = $("<p>").text("Rating: " + rating);
+
+      // Displaying the rating
+      movieDiv.append(pOne);
+
+      // Storing the release year
+      var released = response.Released;
+
+      // Creating an element to hold the release year
+      var pTwo = $("<p>").text("Released: " + released);
+
+      // Displaying the release year
+      movieDiv.append(pTwo);
+
+      // Storing the plot
+      var plot = response.Plot;
+
+      // Creating an element to hold the plot
+      var pThree = $("<p>").text("Plot: " + plot);
+
+      // Appending the plot
+      movieDiv.append(pThree);
+
+      // Retrieving the URL for the image
+      var imgURL = response.Poster;
+
+      // Creating an element to hold the image
+      var image = $("<img>").attr("src", imgURL);
+
+      // Appending the image
+      movieDiv.append(image);
+
+      // Putting the entire movie above the previous movies
+      $("#movies-view").prepend(movieDiv);
+    });
+
+  }
 
    // Function for displaying movie data
    function renderButtons() {
@@ -51,18 +111,19 @@
       });
 
       // Adding a click event listener to all elements with a class of "movie-btn"
-      $(document).on("click", ".btn-sm", displayMovieInfo);
+      $(document).on("click", ".btn-sm", displayGifs);
            
       // Calling the renderButtons function to display the intial buttons
       renderButtons();
-     
+    
+      $(document).on("click", ".btn-sm", displayMovieInfo);
 
-      // Function to empty out the articles
+  // Function to empty out the articles
     function clear() {
     $("#movies-view").empty();
     }
-
-    function displayMovieInfo() {
+  
+    function displayGifs() {
       
         // Empty the region associated with the articles
         clear();
