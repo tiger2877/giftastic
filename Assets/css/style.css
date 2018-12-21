@@ -21,37 +21,71 @@ label { color:orange; font-weight: bold; display: block; width: 150px; float: le
   border-radius: 0.3rem;
 }
 
-p, h1, h4 {
-	font-family: 'Roboto Slab', serif;
+.btn-primary {
+  margin: 5px;
 }
 
-.container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  clear: both;
-  color:black;
+.btn-sm {
+  margin: 10px 0;
+  font-family: 'Raleway', sans-serif;
 }
 
-h1,
-h2,
-h3,
+.btn-sm {
+  margin: 10px 0;
+  font-family: 'Raleway', sans-serif;
+}
+
 p {
   margin-top: 10px;
   margin-bottom: 10px;
   color: whitesmoke;
+  font-size: 1rem;
 }
 
-p:last-child {
-  margin-bottom: 0;
+
+h2 {
+  color: #1C395C;
+  font-family: 'Dosis', sans-serif;
 }
 
-h1,
-h2,
-h3 {
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-weight: 700;
-  color: wheat;
+h3{
+  font-size: 1.25rem;
+  font-family: 'Raleway', sans-serif;
+  color:yellow;
+}
+
+h4{
+  font-size: 1rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  width: 200px;
+  font-family: 'Raleway', sans-serif;
+}
+
+footer {
+  font-family: 'Raleway', sans-serif;
+}
+
+.jumbotron {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 1rem;
+  }
+}
+
+.btn-sm {
+  margin: 10px 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.btn-primary {
+  margin: 5px;
 }
 
 h1 {
@@ -62,18 +96,7 @@ h1 {
   color: aqua;
 }
 
-h2,
-h3 {
-  font-size: 22px;
-}
 
-h4 {
-  font-size: 18px;
-  text-align: center;
-  color: whitesmoke  ;
-  }
-
-/* footer */
 
 footer {
   padding: 30px 0;
@@ -136,30 +159,6 @@ img:hover {
     overflow: auto;
   }
 
-  .work {
-    /* Box-model */
-    width: 47%;
-
-    /* Positioning */
-    margin-bottom: 10px;
-  }
-
-  .work:nth-child(even) {
-    margin-right: 0;
-  }
-
-  .work:nth-child(odd) {
-    float: right;
-  }
-
-  .auth-image {
-    width: 50%;
-  }
-
-  .sidebar {
-    margin-bottom: 40px;
-  }
-}
 
 @media only screen and (max-width: 640px){
   #masthead {
@@ -175,30 +174,3 @@ img:hover {
   main.container {
     padding-top: 0;
   }
-
-  #logo,
-  .work,
-  .auth-image {
-    width: 100%;
-  }
-
-  nav {
-    /* Box-model */
-    width: 100%;
-
-    /* Positioning */
-    margin: 15px 0;
-
-    /* Typography */
-    text-align: center;
-  }
-
-  nav a {
-    /* Box-model */
-    width: 30%;
-    padding-left: 0;
-
-    /* Positioning */
-    margin-left: 0;
-  }
-}
