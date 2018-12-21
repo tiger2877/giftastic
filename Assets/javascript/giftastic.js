@@ -9,7 +9,7 @@
 
   
     // Initial array of movies
-    var moviesArr = ["Finding Nemo", "Frozen", "Lion King","Moana", "Pinocchio", "Ratatouille", "Toy Story"];
+    var moviesArr = ["Disney Bolt", "Finding Nemo", "Frozen", "Lion King","Moana", "Pinocchio", "Ratatouille", "Toy Story"];
 
    // Function for displaying movie data
    function renderButtons() {
