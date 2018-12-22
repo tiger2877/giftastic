@@ -113,10 +113,10 @@
 
       // Adding a click event listener to all elements with a class of "movie-btn"
       $(document).on("click", ".btn-sm", displayGifs);
-           
+     
       // Calling the renderButtons function to display the intial buttons
       renderButtons();
-     
+      
     // Adding a click event listener to all elements with a class of "movie-btn"
     $(document).on("click", ".btn-sm", displayMovieInfo);
 
@@ -162,6 +162,7 @@
                         var gifDiv = $("<div>");
 
                         // Storing the result item's title, rating, source, and type
+                        
                         var title= results[i].title;
                         var rating = results[i].rating;    
                         var source = results[i].source;       
@@ -174,22 +175,22 @@
                         var pThree = $("<p>").text("Source: " + source);  
 
                         // Creating an image tag
-                        var movieImage = $("<img>");
+                        var gifImage = $("<img>");
 
                         // Adding class and data-state attribute to the movieImage
-                        movieImage.attr("class", type); 
-                        movieImage.attr("data-state", "still"); 
-                        movieImage.attr("data-still", stillImage);
-                        movieImage.attr('data-animate', animateImage);     
+                        gifImage.attr("class", type); 
+                        gifImage.attr("data-state", "still"); 
+                        gifImage.attr("data-still", stillImage);
+                        gifImage.attr('data-animate', animateImage);     
                         // Giving the image tag an src attribute of a proprty pulled off the
                         // result item
-                        movieImage.attr("src", results[i].images.fixed_height_small.url);
+                        gifImage.attr("src", results[i].images.fixed_height_small.url);
 
                         // Appending the paragraph and personImage we created to the "gifDiv" div we created
                         gifDiv.append(pOne);
                         gifDiv.append(pTwo);
                         gifDiv.append(pThree);
-                        gifDiv.append(movieImage);
+                        gifDiv.append(gifImage);
 
                         // Prepending the gifDiv to the "#movies-view" div in the HTML
                         $("#gif-view").prepend(gifDiv);
