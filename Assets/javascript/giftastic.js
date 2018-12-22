@@ -111,14 +111,14 @@
         $("#movie-input").val("");
       });
 
-      // Adding a click event listener to all elements with a class of "movie-btn"
+      // on click, show gifs
       $(document).on("click", ".btn-sm", displayGifs);
      
       // Calling the renderButtons function to display the intial buttons
       renderButtons();
       
-    // Adding a click event listener to all elements with a class of "movie-btn"
-    $(document).on("click", ".btn-sm", displayMovieInfo);
+     // on click, show movie info
+     $(document).on("click", ".btn-sm", displayMovieInfo);
 
   // Function to empty out the articles
     function clear() {
