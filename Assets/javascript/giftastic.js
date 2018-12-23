@@ -171,8 +171,12 @@
                         var animateImage = results[i].images.fixed_height_small.url;    
                         // Creating a paragraph tag with the result item's rating
                         var pOne = $("<p>").html("<h3> Title: " + title + "</h3>");
-                        var pTwo = $("<p>").text("Rating: " + rating);
-                        var pThree = $("<p>").text("Source: " + source);  
+                        var pTwo = $("<p>").html("<h4> Rating: " + rating + "</h4>");
+                        var link = $("<a>")
+                        .html("<p> Download Gif </p>")
+                        .attr("href", animateImage)
+                        .attr("download", "img.gif")
+
 
                         // Creating an image tag
                         var gifImage = $("<img>");
@@ -189,8 +193,8 @@
                         // Appending the paragraph and personImage we created to the "gifDiv" div we created
                         gifDiv.append(pOne);
                         gifDiv.append(pTwo);
-                        gifDiv.append(pThree);
                         gifDiv.append(gifImage);
+                        gifDiv.append(link);
 
                         // Prepending the gifDiv to the "#movies-view" div in the HTML
                         $("#gif-view").prepend(gifDiv);
