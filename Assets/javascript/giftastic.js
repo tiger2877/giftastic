@@ -177,7 +177,7 @@
                         var stillImage = results[i].images.fixed_height_small_still.url;
                         var animateImage = results[i].images.fixed_height_small.url;    
                         // Creating a paragraph tag with the result item's rating
-                        var pOne = $("<p>").html("<h3> Title: " + title + "</h3>");
+                        var pOne = $("<p>").html("<h3>" + title + "</h3>");
                         var pTwo = $("<p>").html("<h4> Rating: " + rating + "</h4>");
                         var link = $("<a>")
                         .html("<p> GIF Source </p>")
