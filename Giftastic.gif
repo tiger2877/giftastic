@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://kristin-i.com/Front-End/GifTastic/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Giftastic</title>
+
+    <!-- Bootstrap core CSS and Bootwatch theme -->
+    <link rel="stylesheet" href="./Giftastic_files/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="./Giftastic_files/styles.css" rel="stylesheet">
+    <link href="./Giftastic_files/css" rel="stylesheet">
+
+  </head><body class="bg-light">
+    <div class="container">
+      
+      <!-- Header Section
+      ---------------------------------------->
+      <div class="py-3 text-center">
+        <img src="./Giftastic_files/diamond.gif" width="150" alt="animated diamond icon">
+        <h2><strong>Giftastic</strong><br>90s TV Edition</h2>
+      </div>
+
+      <!-- Button Section
+      ---------------------------------------->
+      <div class="jumbotron">
+        <div class="container" id="buttons-view"><button class="btn btn-primary btn-sm" data-name="My So-Called Life">My So-Called Life</button><button class="btn btn-primary btn-sm" data-name="Daria">Daria</button><button class="btn btn-primary btn-sm" data-name="Fresh Prince of Bel-Air">Fresh Prince of Bel-Air</button><button class="btn btn-primary btn-sm" data-name="Twin Peaks">Twin Peaks</button><button class="btn btn-primary btn-sm" data-name="Friends">Friends</button><button class="btn btn-primary btn-sm" data-name="Ren &amp; Stimpy">Ren &amp; Stimpy</button><button class="btn btn-primary btn-sm" data-name="The X-Files">The X-Files</button><button class="btn btn-primary btn-sm" data-name="Seinfeld">Seinfeld</button></div>
+      </div>
+
+      <!-- Gif Section
+      ---------------------------------------->
+      <div class="row">
+        
+        <!-- Search Box -->
+        <div class="col-md-4 order-md-2 mb-4">
+          <h3 class="text-muted">Add another TV show</h3>
+          <form class="card p-2">
+            <div class="input-group">
+              <input type="text" class="form-control" id="show-input">
+              <div class="input-group-append">
+                <button type="button" class="btn btn-secondary" id="add-show">Go!</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Gif Section -->
+        <div class="col-md-8">
+          <div class="row" id="show-view"></div>
+        </div>
+
+      </div>
+
+      <!-- Footer Section
+      ---------------------------------------->
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2018 Kristin Iacone</p>
+        <img src="./Giftastic_files/powered-by-giphy.gif" width="200">
+      </footer>
+    
+    </div>
+
+    <!-- Javascript
+      ---------------------------------------->
+    <script src="./Giftastic_files/jquery-3.3.1.min.js.download" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./Giftastic_files/giftastic.js.download"></script>
+  
+  
+</body></html>

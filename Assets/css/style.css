@@ -82,6 +82,24 @@ footer {
   margin: 5px;
 }
 
+.btn {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: solid 1px #C0392B;
+  background-color: #E74C3C;
+  text-decoration: none;
+  color: white;
+}
+
+.btn:hover {
+  opacity: .9;
+}
+
+.btn:active {
+  opacity: 1;
+}
+
 h1 {
   padding-bottom: 20px;
   font-size: 50px;
@@ -96,7 +114,6 @@ footer {
   font-size: 12px;
   color: #ffffff;
   text-align: center;
-  background:black;
   height: 50px;
 }
 
@@ -138,8 +155,10 @@ img:hover {
   .jumbotron {
     padding: 2rem;
   }
+  .container {
+    overflow: auto;
+  }
 }
-
 
 @media only screen and (max-width: 768px) {
   .jumbotron {

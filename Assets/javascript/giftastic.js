@@ -23,8 +23,8 @@
       method: "GET"
     }).then(function(response) {
 
-        // console.log(queryURL);
-        console.log(response);
+        // // console.log(queryURL);
+        // console.log(response);
 
       // Creating a div to hold the movie
       var movieDiv = $("<div class='movie'>");
@@ -154,7 +154,7 @@
             .then(function(response) {
 
                 //console.log(queryURL);
-                //console.log(response);
+                // console.log(response);
 
             // Storing an array of results in the results variable
             var results = response.data;
@@ -201,9 +201,13 @@
                         gifDiv.append(pTwo);
                         gifDiv.append(link);
                         gifDiv.append(gifImage);
+
+                        $("#gif-view").addDownloadBtn('Download', 'btn btn-primary');
         
                         // Prepending the gifDiv to the "#movies-view" div in the HTML
                         $("#gif-view").prepend(gifDiv);
+
+                
 
                         $(".gif").on("click", function() {
                         // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
