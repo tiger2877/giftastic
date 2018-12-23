@@ -73,12 +73,6 @@ footer {
   border-radius: 0.3rem;
 }
 
-@media (min-width: 576px) {
-  .jumbotron {
-    padding: 1rem;
-  }
-}
-
 .btn-sm {
   margin: 10px 0;
   font-family: 'Raleway', sans-serif;
@@ -95,8 +89,6 @@ h1 {
   border-bottom: 3px solid gold;
   color: aqua;
 }
-
-
 
 footer {
   padding: 30px 0;
@@ -143,34 +135,28 @@ img:hover {
 }
 
 @media only screen and (max-width:980px) {
-  nav {
-    margin-right: 5px;
+  .jumbotron {
+    padding: 2rem;
   }
 }
 
 
 @media only screen and (max-width: 768px) {
-  .main-section,
-  .sidebar {
-    max-width: 100%;
+  .jumbotron {
+    padding: 1.5rem;
   }
 
-  main {
+  .container {
     overflow: auto;
   }
-
+}
 
 @media only screen and (max-width: 640px){
-  #masthead {
-    /* Positioning */
-    position: static;
-    margin-bottom: 20px;
+  .jumbotron {
+    padding: 1rem;
   }
 
-  header .container {
-    padding: 0;
+  .container {
+    overflow: auto;
   }
-
-  main.container {
-    padding-top: 0;
-  }
+}
