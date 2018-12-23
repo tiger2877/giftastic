@@ -23,7 +23,7 @@
       method: "GET"
     }).then(function(response) {
 
-        console.log(queryURL);
+        // console.log(queryURL);
         console.log(response);
 
       // Creating a div to hold the movie
@@ -61,9 +61,16 @@
 
       // Creating an element to hold the image
       var image = $("<img>").attr("src", imgURL);
-
+ 
       // Appending the image
       movieDiv.append(image);
+
+      var link = $("<a>")
+      .html("<p> Download Poster</p>")
+      .attr("href", imgURL)
+      .attr("download", "img.jpg")
+
+      movieDiv.append(link);
 
       // Putting the entire movie above the previous movies
       $("#movies-view").prepend(movieDiv);
@@ -173,10 +180,9 @@
                         var pOne = $("<p>").html("<h3> Title: " + title + "</h3>");
                         var pTwo = $("<p>").html("<h4> Rating: " + rating + "</h4>");
                         var link = $("<a>")
-                        .html("<p> Download Gif </p>")
-                        .attr("href", animateImage)
+                        .html("<p> GIF Source </p>")
+                        .attr("href", source)
                         .attr("download", "img.gif")
-
 
                         // Creating an image tag
                         var gifImage = $("<img>");
@@ -193,9 +199,9 @@
                         // Appending the paragraph and personImage we created to the "gifDiv" div we created
                         gifDiv.append(pOne);
                         gifDiv.append(pTwo);
-                        gifDiv.append(gifImage);
                         gifDiv.append(link);
-
+                        gifDiv.append(gifImage);
+        
                         // Prepending the gifDiv to the "#movies-view" div in the HTML
                         $("#gif-view").prepend(gifDiv);
 
